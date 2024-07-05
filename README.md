@@ -51,7 +51,7 @@ Once hen has been loaded for the first time it will be copied to the consoles in
 ---------------------------------------------------------------------------------------
 ## Wiring
 
-<img src="PPPwn/wiring.jpg" />
+<img src="wiring.jpg" />
 
 - Option 1 : You can savage RJ45 head and solder to luckfox board, or buy Plus version.
 - Option 2 : Solder Ethernet wires directly to luckfox board, I think this option has a low noise.
