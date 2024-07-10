@@ -75,7 +75,7 @@ sudo bash /home/PPPwn/install.sh
 
 During the install process you will be asked to set some options.
 
-It will create config.sh and auto run script (run.sh) when boot the devices.
+It will create auto run script (runl.sh) when boot the devices.
 
 ---------------------------------------------------------------------------------------
 
