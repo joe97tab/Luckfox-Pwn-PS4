@@ -7,6 +7,7 @@ This is alternative script to using Luckfox Pico to pwn PS4, it included all fir
 
 ---------------------------------------------------------------------------------------
 
+
 | PS4 FW | GoldHEN | HEN-VTX | TheOfficialFloW |
 | --- | --- | --- | --- |
 | 11.00 | o | o | o |
@@ -16,8 +17,8 @@ This is alternative script to using Luckfox Pico to pwn PS4, it included all fir
 | 10.01 | o | o | o |
 | 10.00 | o | o | o |
 | 9.60 | o | o | o |
-| 9.51 | ? | o | o |
-| 9.50 | ? | o | o |
+| 9.51 | x | o | o |
+| 9.50 | x | o | o |
 | 9.04 | x | o | o |
 | 9.03 | x | o | o |
 | 9.00 | o | o | o |
@@ -28,13 +29,13 @@ This is alternative script to using Luckfox Pico to pwn PS4, it included all fir
 | 8.00 | x | o | o |
 | 8.01 | x | o | o |
 | 7.55 | x | o | o |
-| 7.51 | x | x | o |
-| 7.50 | x | x | o |
-| 7.02 | x | x | o |
-| 7.01 | x | x | o |
-| 7.00 | x | x | o |
+| 7.51 | x | o | o |
+| 7.50 | x | o | o |
+| 7.02 | x | o | o |
+| 7.01 | x | o | o |
+| 7.00 | x | o | o |
 
-[PPPwn](https://github.com/TheOfficialFloW/PPPwn)
+[TheOfficialFloW](https://github.com/TheOfficialFloW/PPPwn)
 
 The exploit only prints `PPPwned` on your PS4 as a proof-of-concept.
 
@@ -46,7 +47,11 @@ Once goldhen has been loaded for the first time it will be copied to the console
 [hen-vtx](https://github.com/EchoStretch/ps4-hen-vtx/releases)
 
 You need to place the payload.bin file onto the root of a usb drive and plug it into the console.
-Once hen has been loaded for the first time it will be copied to the consoles internal hdd and the usb is no longer required
+Once hen has been loaded for the first time it will be copied to the consoles internal hdd and the usb is no longer required.
+
+[BestPig](https://github.com/BestPig/ps4-hen-vtx/releases)
+
+No need to place any file onto the root of a usb drive.
 
 ---------------------------------------------------------------------------------------
 ## Wiring
@@ -65,6 +70,8 @@ Once hen has been loaded for the first time it will be copied to the consoles in
 - If everthing worked change to GoldHEN or HEN.
 - no-wait-padi, can reduce pwn time but may miss captured package.
 - When pwn the console don't touch anything it will increase the success rate.
+- `Cannot connect to network: (NW-31274-7).` It means the program try to injection, sometime the exploit fails or the PS4 crashes.
+- `LAN cable not connected.` It means the program will try next attempt, if pwn success it turns off Ethernet and shutdown.
  
 ---------------------------------------------------------------------------------------
 
