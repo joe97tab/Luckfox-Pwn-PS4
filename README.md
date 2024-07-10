@@ -63,6 +63,22 @@ No need to place any file onto the root of a usb drive.
 
 ---------------------------------------------------------------------------------------
 
+## How to install :
+
+In terminal copy all files from /PPPwn/ to /home/PPPwn/.
+
+Install in terminal with this command :
+
+```sh
+sudo bash /home/PPPwn/install.sh
+```
+
+During the install process you will be asked to set some options.
+
+It will create config.sh and auto run script (run.sh) when boot the devices.
+
+---------------------------------------------------------------------------------------
+
 ## Tips
 
 - First, use IPv6 address and TheOfficialFloW to pwn PS4.
