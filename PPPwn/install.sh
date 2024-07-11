@@ -16,6 +16,7 @@ if [ -f /home/PPPwnL.txt ] ; then
 if [ -f /home/PPPwn/PPPwnL.tar ] ; then
 sudo tar -xf /home/PPPwn/PPPwnL.tar -C /home/
 sudo rm /home/PPPwn/PPPwnL.tar
+echo -e '\r\n\033[32mUpdate Luckfox PPPwn\033[0m'
 else
 echo -e '\r\n\033[32mLuckfox PPPwn already installed\033[0m'
 echo -e '\r\n\033[32mReconfig Luckfox PPPwn\033[0m'
@@ -199,46 +200,47 @@ read -p "$(printf '\r\n\033[37mWould you like to change the time delay before pp
 case $delayc in
 [Yy]* ) 
 while true; do
-read -p  "$(printf '\033[37mEnter the timeout value [0 - 15]: \033[0m')" DELAYS
+read -p  "$(printf '\r\n\033[37mEnter the timeout value [0 - 15]: \033[0m')" DELAYS
 case $DELAYS in
 "" ) 
-echo -e '\033[31mCannot be empty!\033[0m';;
+echo -e '\r\n\033[31mCannot be empty!\033[0m';;
 * )  
 if grep -q '^[0-9]*$' <<<$DELAYS ; then
 if [[ ! "$DELAYS" =~ ^("0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|"10"|"11"|"12"|"13"|"14"|"15")$ ]]  ; then
-echo -e '\033[31mThe value must be between 0 and 15\033[0m';
+echo -e '\r\n\033[31mThe value must be between 0 and 15\033[0m';
 else 
 break;
 fi
 else 
-echo -e '\033[31mThe delay time must only contain a number between 0 and 15\033[0m';
+echo -e '\r\n\033[31mThe delay time must only contain a number between 0 and 15\033[0m';
 fi
 esac
 done
-echo -e '\033[33mDelay start set to '$DELAYS' (seconds)\033[0m'
+echo -e '\r\n\033[33mDelay start set to '$DELAYS' (seconds)\033[0m'
 DELAYSTART="sleep $DELAYS"
 break;;
 [Nn]* ) 
-echo -e '\033[32mUsing the default setting: 0 (second)\033[0m'
+echo -e '\r\n\033[32mUsing the default setting: 0 (second)\033[0m'
 DELAYSTART=""
 break;;
-* ) echo -e '\033[31mPlease answer Y or N\033[0m';;
+* ) echo -e '\r\n\033[31mPlease answer Y or N\033[0m';;
 esac
 done
 
-echo -e '\033[37mWhen everything work as expect, please set Luckfox Pico to shutdown after pwn success\033[0m'
+echo -e ''
+echo -e '\r\n\033[37mWhen everything work as expect, please set Luckfox Pico to shutdown after pwn success\033[0m'
 while true; do
 read -p "$(printf '\r\n\033[37mDo you want Luckfox Pico to shutdown after pwn success\r\n\033[37m(Y|N)?: \033[0m')" lpicoshut
 case $lpicoshut in
 [Yy]* ) 
 SHUTDOWN="sudo poweroff"
-echo -e '\033[32mThe Luckfox Pico will shutdown\033[0m'
+echo -e '\r\n\033[32mThe Luckfox Pico will shutdown\033[0m'
 break;;
 [Nn]* ) 
-echo -e '\033[33mThe Luckfox Pico will not shutdown\033[0m'
+echo -e '\r\n\033[33mThe Luckfox Pico will not shutdown\033[0m'
 SHUTDOWN="exit 1"
 break;;
-* ) echo -e '\033[31mPlease answer Y or N\033[0m';;
+* ) echo -e '\r\n\033[31mPlease answer Y or N\033[0m';;
 esac
 done
 

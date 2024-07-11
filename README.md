@@ -65,7 +65,9 @@ No need to place any file onto the root of a usb drive.
 
 ## How to install :
 
-In terminal copy all files from /PPPwn/ to /home/PPPwn/.
+[Prepare Luckfox pico](https://wiki.luckfox.com/Luckfox-Pico/Download)
+
+Use any FTP file manager, copy all files from /PPPwn/ to /home/PPPwn/.
 
 Install in terminal with this command :
 
@@ -76,6 +78,32 @@ sudo bash /home/PPPwn/install.sh
 During the install process you will be asked to set some options.
 
 It will create auto run script (runl.sh) when boot the devices.
+
+Shut down and connect to ps4 and test your pppwn.
+
+On your PS4:
+
+- Go to `Settings` and then `Network`
+- Select `Set Up Internet connection` and choose `Use a LAN Cable`
+- Choose `Custom` setup and choose `PPPoE` for `IP Address Settings`
+- Enter anything for `PPPoE User ID` and `PPPoE Password`
+- Choose `Automatic` for `DNS Settings` and `MTU Settings`
+- Choose `Do Not Use` for `Proxy Server`
+
+Normally the pwn process will success on first or second attempt.
+
+---------------------------------------------------------------------------------------
+
+## How to update or Reconfig
+
+To update : copy all files from /PPPwn/ to /home/PPPwn/.
+Reconfig : run install.sh again.
+
+Run in terminal with this command :
+
+```sh
+sudo bash /home/PPPwn/install.sh
+```
 
 ---------------------------------------------------------------------------------------
 
