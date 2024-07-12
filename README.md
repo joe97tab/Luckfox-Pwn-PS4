@@ -97,6 +97,7 @@ Normally the pwn process will success on first or second attempt.
 ## How to update or Reconfig
 
 To update : copy all files from /PPPwn/ to /home/PPPwn/.
+
 Reconfig : run install.sh again.
 
 Run in terminal with this command :
