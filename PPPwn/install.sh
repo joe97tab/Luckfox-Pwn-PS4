@@ -249,19 +249,18 @@ echo '#!/bin/bash
 pwncounter=0
 while [ true ]
 do
-while read -r stdo ; 
-do
-if [[ $stdo  == "[+] Done!" ]] ;then
+sudo /home/PPPwn/'$PPPwnPS4'
+if [ $? -eq 0 ]; then
 sleep 6
-sudo ip link set eth0 down
+sudo ifconfig eth0 down
 '$SHUTDOWN'
-fi
-done < <(timeout 5m sudo /home/PPPwn/'$PPPwnPS4')
-sudo ip link set eth0 down
+else
+sudo ifconfig eth0 down
 if [ $((pwncounter++)) -eq 7 ]; then exit 1; fi
 sleep 1
-sudo ip link set eth0 up
+sudo ifconfig eth0 up
 sleep 2
+fi
 done' | sudo tee /home/PPPwn/runl.sh
 
 if [ -f /home/speedup.txt ] ; then

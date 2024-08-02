@@ -1,27 +1,30 @@
 # Luckfox-Pwn-PS4
 
-# Test on ubuntu jammy
+# Tested on armbian ubuntu jammy.
 # Work in progress, need to test with real hardware.
+# I wrote this script when ordered luckfox pico from aliexpress but the item never came so my script maybe useful to other user.
 
 This is alternative script to using Luckfox Pico to pwn PS4, it included all firmware from 7.00-11.00.
+
+This script should work on other 32 bit linux distros.
 
 ---------------------------------------------------------------------------------------
 
 
 | PS4 FW | GoldHEN | HEN-VTX | TheOfficialFloW |
 | --- | --- | --- | --- |
-| 11.00 | o | o | o |
+| 11.00 | `o` | o | o |
 | 10.71 | x | o | o |
 | 10.70 | x | o | o |
 | 10.50 | x | o | o |
-| 10.01 | o | o | o |
-| 10.00 | o | o | o |
-| 9.60 | o | o | o |
+| 10.01 | `o` | o | o |
+| 10.00 | `o` | o | o |
+| 9.60 | `o` | o | o |
 | 9.51 | x | o | o |
 | 9.50 | x | o | o |
 | 9.04 | x | o | o |
 | 9.03 | x | o | o |
-| 9.00 | o | o | o |
+| 9.00 | `o` | o | o |
 | 8.52 | x | o | o |
 | 8.50 | x | o | o |
 | 8.03 | x | o | o |
@@ -67,7 +70,8 @@ No need to place any file onto the root of a usb drive.
 
 [Prepare Luckfox pico](https://wiki.luckfox.com/Luckfox-Pico/Download)
 
-Use any FTP file manager, copy all files from /PPPwn/ to /home/PPPwn/.
+For : Luckfox pico / mini a : use pico plus image.
+Use any FTP file manager such as MobaXterm, copy all files from /PPPwn/ to /home/PPPwn/.
 
 Install in terminal with this command :
 
